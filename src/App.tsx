@@ -1,9 +1,10 @@
 import {Outlet, Route, Routes} from "react-router";
+import {LoginRoutes} from "./pages/login/routes.tsx";
 
 function App() {
     return (
         <Routes>
-            <Route path="" element={<h1>Login</h1>}/>
+            <Route path="/*" element={<LoginRoutes />}/>
 
             <Route path="paciente" element={ <Outlet/>}>
                 <Route index element={<h1>Paciente</h1>}/>
