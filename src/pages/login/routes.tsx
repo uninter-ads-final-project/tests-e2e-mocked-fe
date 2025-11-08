@@ -1,5 +1,5 @@
 import {useRoutes} from "react-router";
-import {LoginPage} from "./indes.tsx";
+import {LoginPage} from "./index.tsx";
 
 export const LoginRoutes = () => {
     return useRoutes([
