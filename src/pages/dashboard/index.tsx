@@ -3,9 +3,9 @@ import {useState} from "react";
 import {StaffDashboard} from "./staffDashboard.tsx";
 import {PatientDashboard} from "./patientDashboard.tsx";
 
-export const Dashboard = () => {
+export const Dashboard = (props: { isStaff?:boolean }) => {
 
-    const [isStaff, setIsStaff] = useState(true);
+    const [isStaff, setIsStaff] = useState(props.isStaff);
 
     return (
         <>

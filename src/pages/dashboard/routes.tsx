@@ -5,7 +5,7 @@ export const DashboardRoutes = () => {
     return useRoutes([
         {
             path: "/",
-            element: <Dashboard />,
+            element: <Dashboard isStaff={true} />,
             index: true
         },
         {
