@@ -15,7 +15,7 @@ export const RegisterAccount = () => {
     const [submitted, setSubmitted] = useState(false);
 
 
-    const handleChange = (event) => {
+    const handleChange = (event:any) => {
         const {name, value} = event.target;
 
         if (name === 'cpf') {
