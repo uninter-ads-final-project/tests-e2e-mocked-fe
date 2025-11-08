@@ -3,6 +3,7 @@ import {LoginRoutes} from "./pages/login/routes.tsx";
 import {DashboardRoutes} from "./pages/dashboard/routes.tsx";
 import {AgendaRoutes} from "./pages/agenda/routes.tsx";
 import {ReportsRoutes} from "./pages/reports/routes.tsx";
+import {InternationRoutes} from "./pages/internations/routes.tsx";
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
             <Route path="administrador/*" element={<DashboardRoutes />}/>
             <Route path="agenda/*" element={<AgendaRoutes />}/>
             <Route path="relatorios/*" element={<ReportsRoutes />}/>
+            <Route path="internacoes/*" element={<InternationRoutes />}/>
 
         </Routes>
     )
