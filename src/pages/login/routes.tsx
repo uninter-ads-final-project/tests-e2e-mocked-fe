@@ -13,9 +13,5 @@ export const LoginRoutes = () => {
             path: "/nova-conta",
             element: <RegisterAccount />,
         },
-        {
-            path: "logout",
-            element: <h1>Logout page</h1>
-        },
     ]);
 }

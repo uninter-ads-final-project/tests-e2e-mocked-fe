@@ -1,0 +1,39 @@
+.calendar-day {
+    min-height: 120px;
+    padding: 8px;
+}
+
+.calendar-events {
+    margin-top: 8px;
+}
+
+.calendar-week {
+    min-height: 120px;
+}
+
+
+.agenda-consulta {
+    padding: 4px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.agenda-consulta.confirmada {
+    background-color: #d1ecf1;
+    border-left: 3px solid #0dcaf0;
+}
+
+.agenda-consulta.pendente {
+    background-color: #fff3cd;
+    border-left: 3px solid #ffc107;
+}
+
+.agenda-consulta.realizada {
+    background-color: #d4edda;
+    border-left: 3px solid #198754;
+}
+
+.agenda-consulta.cancelada {
+    background-color: #f8d7da;
+    border-left: 3px solid #dc3545;
+}
