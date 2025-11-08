@@ -15,9 +15,9 @@ export const LoginPage =() => {
                     <FormLabel htmlFor='password' data-cy-label='password'>Senha</FormLabel>
                     <FormControl type="password" id='password' data-cy-input='username'/>
                 </CardBody>
-                <CardFooter>
-                    <Button type='submit' data-cy-button='login'>Entrar</Button>
+                <CardFooter className={"gap-3 d-flex align-items-center justify-content-end"}>
                     <a href="#" data-cy-button='forgot_password'>Esqueci minha senha</a>
+                    <Button type='submit' data-cy-button='login'>Entrar</Button>
                 </CardFooter>
             </Card>
         </Container>
