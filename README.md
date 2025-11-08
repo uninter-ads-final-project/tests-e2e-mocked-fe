@@ -1,73 +1,41 @@
-# React + TypeScript + Vite
+# 🧪 Testes End-to-End (E2E) com Mocking de Front-end
+Repositório dedicado aos testes end-to-end com front-end mockado para o projeto final da disciplina.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📋 Sobre o Projeto
+Este repositório contém a suíte de testes end-to-end que simula o comportamento do front-end através de mocks, permitindo testar a integração entre os componentes do sistema de forma isolada e controlada.
 
-Currently, two official plugins are available:
+## 🎯 Objetivo
+Implementar testes automatizados de ponta a ponta
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Validar fluxos críticos da aplicação
 
-## React Compiler
+Garantir qualidade e estabilidade do sistema
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Facilitar a detecção de regressões
 
-## Expanding the ESLint configuration
+## 🛠 Tecnologias Utilizadas
+Cypress - Framework de testes E2E
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+JavaScript/TypeScript - Linguagem de programação
+Cypress
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📁 Estrutura do Projeto
+text
+tests-e2e-mocked-fe/
+├── cypress/
+│   ├── e2e/           # Casos de teste
+│   ├── fixtures/      # Dados estáticos
+│   ├── support/       # Comandos customizados
+│   └── plugins/       # Configurações do Cypress
+├── mocks/            # Definições dos mocks
+├── github/workflows/ # Pipelines de CI/CD
+└── package.json
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+📄 Licença
+Este projeto é destinado exclusivamente para fins educacionais.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+👥 Autor
+Wesley Alberto Alves Benvindo - RU: 4596063
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Nota: Este projeto utiliza mocks para simular o front-end, permitindo testes isolados e consistentes independentemente do estado do ambiente de desenvolvimento.
