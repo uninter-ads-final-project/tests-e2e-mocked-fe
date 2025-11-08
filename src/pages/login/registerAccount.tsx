@@ -16,7 +16,7 @@ export const RegisterAccount = () => {
 
 
     const handleChange = (event) => {
-        const { name, value } = event.target;
+        const {name, value} = event.target;
 
         if (name === 'cpf') {
             const numericValue = value.replace(/\D/g, '').slice(0, 11);
@@ -45,7 +45,7 @@ export const RegisterAccount = () => {
     };
 
 
-    const handleSubmit = (event:any) => {
+    const handleSubmit = (event: any) => {
         event.preventDefault();
         setSubmitted(true);
 
@@ -61,7 +61,7 @@ export const RegisterAccount = () => {
         }
     };
 
-    return(
+    return (
 
         <Container>
             <h1>Vita plus</h1>
@@ -74,13 +74,14 @@ export const RegisterAccount = () => {
 
                     <Form onSubmit={handleSubmit}>
                         <Form.Group className="mb-3">
-                            <Form.Label>Nome Completo *</Form.Label>
+                            <Form.Label data-cy-label="nome">Nome Completo *</Form.Label>
                             <Form.Control
                                 type="text"
                                 name="nome"
                                 value={formData.nome}
                                 onChange={handleChange}
                                 isInvalid={!formData.nome.trim() && submitted}
+                                data-cy-input="nome"
                             />
                             <Form.Control.Feedback type="invalid">
                                 Este campo é obrigatório
@@ -88,13 +89,14 @@ export const RegisterAccount = () => {
                         </Form.Group>
 
                         <Form.Group className="mb-3">
-                            <Form.Label>CPF *</Form.Label>
+                            <Form.Label data-cy-label="cpf">CPF *</Form.Label>
                             <Form.Control
                                 type="text"
                                 name="cpf"
                                 value={formData.cpf}
                                 onChange={handleChange}
                                 isInvalid={!formData.cpf.trim() && submitted}
+                                data-cy-input="cpf"
                             />
                             <Form.Control.Feedback type="invalid">
                                 Este campo é obrigatório
@@ -102,13 +104,14 @@ export const RegisterAccount = () => {
                         </Form.Group>
 
                         <Form.Group className="mb-3">
-                            <Form.Label>RG *</Form.Label>
+                            <Form.Label data-cy-label="rg">RG *</Form.Label>
                             <Form.Control
                                 type="text"
                                 name="rg"
                                 value={formData.rg}
                                 onChange={handleChange}
                                 isInvalid={!formData.rg.trim() && submitted}
+                                data-cy-input="rg"
                             />
                             <Form.Control.Feedback type="invalid">
                                 Este campo é obrigatório
@@ -116,13 +119,14 @@ export const RegisterAccount = () => {
                         </Form.Group>
 
                         <Form.Group className="mb-3">
-                            <Form.Label>Endereço (Linha 1) *</Form.Label>
+                            <Form.Label data-cy-label="endereco1">Endereço (Linha 1) *</Form.Label>
                             <Form.Control
                                 type="text"
                                 name="endereco1"
                                 value={formData.endereco1}
                                 onChange={handleChange}
                                 isInvalid={!formData.endereco1.trim() && submitted}
+                                data-cy-input="endereco1"
                             />
                             <Form.Control.Feedback type="invalid">
                                 Este campo é obrigatório
@@ -130,23 +134,25 @@ export const RegisterAccount = () => {
                         </Form.Group>
 
                         <Form.Group className="mb-3">
-                            <Form.Label>Endereço (Linha 2)</Form.Label>
+                            <Form.Label data-cy-label="endereco2">Endereço (Linha 2)</Form.Label>
                             <Form.Control
                                 type="text"
                                 name="endereco2"
                                 value={formData.endereco2}
                                 onChange={handleChange}
+                                data-cy-input="endereco2"
                             />
                         </Form.Group>
 
                         <Form.Group className="mb-3">
-                            <Form.Label>Telefone Principal *</Form.Label>
+                            <Form.Label data-cy-label="contato_principal">Telefone Principal *</Form.Label>
                             <Form.Control
                                 type="tel"
                                 name="contato_principal"
                                 value={formData.contato_principal}
                                 onChange={handleChange}
                                 isInvalid={!formData.contato_principal.trim() && submitted}
+                                data-cy-input="contato_principal"
                             />
                             <Form.Control.Feedback type="invalid">
                                 Este campo é obrigatório
@@ -154,20 +160,21 @@ export const RegisterAccount = () => {
                         </Form.Group>
 
                         <Form.Group className="mb-3">
-                            <Form.Label>Telefone Secundário</Form.Label>
+                            <Form.Label data-cy-label="contato_secundario">Telefone Secundário</Form.Label>
                             <Form.Control
                                 type="tel"
                                 name="contato_secundario"
                                 value={formData.contato_secundario}
                                 onChange={handleChange}
+                                data-cy-input="contato_secundario"
                             />
                         </Form.Group>
 
-                        <Button variant="outline-danger" type="reset">
+                        <Button variant="outline-danger" type="reset" data-cy-button="reset">
                             Cancelar
                         </Button>
 
-                        <Button variant="primary" type="submit"  className="mx-3">
+                        <Button variant="primary" type="submit" data-cy-button="submit" className='mx-3'>
                             Criar Cadastro
                         </Button>
                     </Form>
