@@ -8,13 +8,5 @@ export const ReportsRoutes = () => {
             element: <Resports />,
             index: true
         },
-        // {
-        //     path: "/nova-consulta",
-        //     element: <AddAppointment />,
-        // },
-        // {
-        //     path: "/gerenciar-agenda",
-        //     element: <ManageAgenda />
-        // },
     ]);
 }
