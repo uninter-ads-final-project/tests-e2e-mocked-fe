@@ -20,7 +20,8 @@ JavaScript/TypeScript - Linguagem de programação
 Cypress
 
 ## 📁 Estrutura do Projeto
-text
+
+```bash
 tests-e2e-mocked-fe/
 ├── cypress/
 │   ├── e2e/           # Casos de teste
@@ -30,6 +31,7 @@ tests-e2e-mocked-fe/
 ├── mocks/            # Definições dos mocks
 ├── github/workflows/ # Pipelines de CI/CD
 └── package.json
+```
 
 
 📄 Licença
