@@ -31,7 +31,7 @@ export const LoginPage = () => {
 
     return (
         <Container>
-            <h1>Vita saúde</h1>
+            <h1>Vita Plus</h1>
 
             {!!formUser.username && !!formUser.password && isLogInFailed &&
                 <Card className='bg-danger my-5'>
