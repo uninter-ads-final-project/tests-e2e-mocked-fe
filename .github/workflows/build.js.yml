@@ -47,7 +47,7 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        source: "build/"
+        source: "dist/"
         target: "./builds"
         strip_components: 0
      
