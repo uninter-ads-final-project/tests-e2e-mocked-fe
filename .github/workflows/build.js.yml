@@ -33,16 +33,15 @@ jobs:
 
     - name: Deploy to Server
       # uses: appleboy/scp-action@v0.1.4
+      env:
+        SSHPASS: ${{ secrets.SERVER_PASSWORD }}
       run: |
-        # Install sshpass
-        sudo apt-get update && sudo apt-get install -y sshpass
-        
         echo "Testing SSH connection..."
         # Correct syntax: sshpass -e ssh [ssh-options] [command]
         sshpass -e ssh \
           -o StrictHostKeyChecking=no \
           -o ConnectTimeout=30 \
-          -p ${{ secrets.SERVER_PORT || 22 }} \
+          -p ${{ secrets.SERVER_PORT }} \
           ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} \
           "echo 'SSH connection successful!'; pwd; whoami"
       # with:
