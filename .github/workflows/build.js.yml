@@ -32,14 +32,16 @@ jobs:
     ##- run: npm test
 
     - name: Deploy to Server
-      uses: appleboy/scp-action@v0.1.4
-      with:
-        host: ${{ secrets.SERVER_HOST }}
-        username: ${{ secrets.SERVER_USERNAME }}
-        password: ${{ secrets.SERVER_PASSWORD }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        port: ${{ secrets.SERVER_PORT }}
-        source: "*"
-        target: "/repos/"
-        overwrite: true
-        rm: false  # Don't delete remote files before copy
+      # uses: appleboy/scp-action@v0.1.4
+      run: |
+        sshpass -p ${{ secrets.SERVER_PASSWORD }} ssh -o StrictHostKeyChecking=no -p ${{ secrets.SERVER_PORT }} ${{ secrets.SERVER_USERNAME}}@${{ secrets.SERVER_HOST }} 'cd /home/wes'
+      # with:
+      #   host: ${{ secrets.SERVER_HOST }}
+      #   username: ${{ secrets.SERVER_USERNAME }}
+      #   password: ${{ secrets.SERVER_PASSWORD }}
+      #   key: ${{ secrets.SSH_PRIVATE_KEY }}
+      #   port: ${{ secrets.SERVER_PORT }}
+      #   source: "*"
+      #   target: "/repos/"
+      #   overwrite: true
+      #   rm: false  # Don't delete remote files before copy
