@@ -41,3 +41,6 @@ Este projeto é destinado exclusivamente para fins educacionais.
 Wesley Alberto Alves Benvindo - RU: 4596063
 
 Nota: Este projeto utiliza mocks para simular o front-end, permitindo testes isolados e consistentes independentemente do estado do ambiente de desenvolvimento.
+
+
+Running action
