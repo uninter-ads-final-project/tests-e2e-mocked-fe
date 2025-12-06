@@ -41,3 +41,5 @@ jobs:
         port: ${{ secrets.SERVER_PORT }}
         source: "*"
         target: "/repos/"
+        overwrite: true
+        rm: false  # Don't delete remote files before copy
