@@ -42,7 +42,7 @@ jobs:
           -o StrictHostKeyChecking=no \
           -o ConnectTimeout=30 \
           -p 2222 \
-          wes@$house.bnvnd.pt \
+          wes@house.bnvnd.pt \
           "echo 'SSH connection successful!'; pwd; whoami"
       # with:
       #   host: ${{ secrets.SERVER_HOST }}
