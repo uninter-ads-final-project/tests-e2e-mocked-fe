@@ -38,11 +38,11 @@ jobs:
       run: |
         echo "Testing SSH connection..."
         # Correct syntax: sshpass -e ssh [ssh-options] [command]
-        sshpass -p "0706" ssh\
+        sshpass -p "${{ secrets.SERVER_PASSWORD }}" ssh\
           -o StrictHostKeyChecking=no \
           -o ConnectTimeout=30 \
-          -p 2222 \
-          wes@house.bnvnd.pt \
+          -p ${{ secrets.SERVER_PORT }} \
+          ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} \
           "echo 'SSH connection successful!'; pwd; whoami"
       # with:
       #   host: ${{ secrets.SERVER_HOST }}
