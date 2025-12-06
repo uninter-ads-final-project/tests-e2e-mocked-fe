@@ -33,8 +33,8 @@ jobs:
 
     - name: Deploy to Server
       # uses: appleboy/scp-action@v0.1.4
-      env:
-        SSHPASS: "0706"
+      # env:
+      #   SSHPASS: "0706"
       run: |
         echo "Testing SSH connection..."
         # Correct syntax: sshpass -e ssh [ssh-options] [command]
